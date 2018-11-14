@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang= "en">
+
+<head>
+    <meta charset = "UTF-8">
+    <title>Learn Js </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    
+    </style>
+    </head>
+<body style="background-color:#000">
+
+    
+    <div id="xyz" style=" align-content: center; font-size: 200px; display:block; padding: 170px; margin-left: 300px; color: red"></div>
+    <script>
+    
+    var theDiv = document.getElementById('xyz'),
+    seconds = 112 ,
+    secondPass,
+    countDown = setInterval(function(){
+        'use strict';
+        
+        secondPass()
+    }, 1000);
+function secondPass(){
+    'use strict';
+  var minutes = Math.floor(seconds/60),
+      remsecond = seconds % 60;
+    if (seconds < 10 ){
+        remsecond = remsecond + "0";
+    };
+    
+    theDiv.innerHTML = minutes + ":" + remsecond;
+    
+    if(seconds > 0){
+        
+        seconds = seconds - 1
+        
+    }
+    
+    else{
+        clearInterval(countDown);
+        
+    }
+    
+    
+};
+    
+    </script>
+    
+    </body>
+
+
+
+</html>
+
